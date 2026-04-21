@@ -1,8 +1,21 @@
-function calculateSquare(){
-    let value = document.getElementById('number').value;
-    let result = document.getElementById('result');
 
     //add code here
+    function squareNumber() {
+    const input = document.getElementById("number");
+    const resultDiv = document.getElementById("result");
+
+    // If either element doesn't exist, stop (prevents null errors)
+    if (!input || !resultDiv) return;
+
+    const value = Number(input.value);
+
+    if (isNaN(value)) {
+        resultDiv.textContent = "Invalid, please enter a number";
+    } else {
+        resultDiv.textContent = value * value;
+    }
+}
+
     
 }
 
