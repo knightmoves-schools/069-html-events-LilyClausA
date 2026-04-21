@@ -1,10 +1,7 @@
-
-    //add code here
-    function squareNumber() {
+function squareNumber() {
     const input = document.getElementById("number");
     const resultDiv = document.getElementById("result");
 
-    // If either element doesn't exist, stop (prevents null errors)
     if (!input || !resultDiv) return;
 
     const value = Number(input.value);
@@ -16,8 +13,6 @@
     }
 }
 
-    
-}
 
 //should multiply the input with the id number with itself 
 // and display the squared value in the div with the id result
