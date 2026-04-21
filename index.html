@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Squaring Calculator</title>
-</head>
-<body>
-    <h2>Squaring Calculator</h2>
-    <input id="number" placeholder="Enter a Number">
-    <button id="calculate">Calculate</button>
-    <div id="result">Replace Me</div>
-    
-    <script src="index.js"></script>
-</body>
-</html>
+<input id="id" type="text" placeholder="Enter a number">
+<button onclick="squareValue()">Square It</button>
+
+<div id="result"></div>
+
+<script>
+function squareValue() {
+    const input = document.getElementById("id").value;
+    const resultDiv = document.getElementById("result");
+
+    // Convert input to number
+    const num = Number(input);
+
+    // Check if it's a valid number
+    if (isNaN(num)) {
+        resultDiv.textContent = "Invalid, please enter a number";
+    } else {
+        resultDiv.textContent = num * num;
+    }
+}
+</script>
