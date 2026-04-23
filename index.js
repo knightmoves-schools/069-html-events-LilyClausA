@@ -1,21 +1,17 @@
-function squareNumber() {
-    const input = document.getElementById("number");
-    const resultDiv = document.getElementById("result");
+function calculateSquare(){
+    let value = document.getElementById('number').value;
+    let result = document.getElementById('result');
 
-    if (!input || !resultDiv) return;
-    const rawValue = input.value.trim();
-    const value = Number(rawValue);
-
-    if (rawValue ==="" || Number.isNaN(value)) {
-        resultDiv.textContent = "Invalid, please enter a number";
+    let num = parseFloat(value);
+    if (isNaN(num)) {
+        result.innerHTML = 'Invalid, please enter a number';
     } else {
-        resultDiv.textContent = value * value;
+        result.innerHTML = num * num;
     }
-
+    
 }
 
-document.getElementById("calculate").addEventListener("click",squareNumber);
-
+document.getElementById('calculate').addEventListener('click', calculateSquare);
 
 //should multiply the input with the id number with itself 
 // and display the squared value in the div with the id result
