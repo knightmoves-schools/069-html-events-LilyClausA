@@ -3,14 +3,15 @@ function squareNumber() {
     const resultDiv = document.getElementById("result");
 
     if (!input || !resultDiv) return;
+    const rawValue = input.value;
+    const value = Number(rawValue);
 
-    const value = Number(input.value);
-
-    if rawValue ==="" || Number.isNaN(Number(rawValue)) {
+    if (rawValue ==="" || Number.isNaN(rawValue)) {
         resultDiv.textContent = "Invalid, please enter a number";
     } else {
         resultDiv.textContent = value * value;
     }
+
 }
 
 
