@@ -14,6 +14,8 @@ function squareNumber() {
 
 }
 
+document.getElementById("calculate").addEventListener("click",squareNumber);
+
 
 //should multiply the input with the id number with itself 
 // and display the squared value in the div with the id result
