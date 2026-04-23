@@ -6,7 +6,7 @@ function squareNumber() {
     const rawValue = input.value;
     const value = Number(rawValue);
 
-    if (rawValue ==="" || Number.isNaN(rawValue)) {
+    if (rawValue ==="" || Number.isNaN(value)) {
         resultDiv.textContent = "Invalid, please enter a number";
     } else {
         resultDiv.textContent = value * value;
