@@ -3,7 +3,7 @@ function squareNumber() {
     const resultDiv = document.getElementById("result");
 
     if (!input || !resultDiv) return;
-    const rawValue = input.value;
+    const rawValue = input.value.trim();
     const value = Number(rawValue);
 
     if (rawValue ==="" || Number.isNaN(value)) {
